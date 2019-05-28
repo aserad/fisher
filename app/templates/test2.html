@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    qiyue <br>
+    {{ data.name }} <br>
+    {{ data.age }}
+
+    {% for k, v in data.items() %}
+        {{ k }}
+        {{ v }}
+    {% endfor %}
+    <hr>
+    {% get_flashed_messages() %}
+
+</body>
+</html>

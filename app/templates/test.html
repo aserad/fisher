@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    {{ super() }} {# 继承模板block里面的代码 #}
+     qiyue <br>
+    {{ data.name }} <br>
+    {{ data.age }} <br>
+    {{ data.sex | default('default')  }} <br>
+    {{ data.list | length()  }} <br>
+
+    {% for k, v in data.items() %}
+        {{ k }}: {{ v}} <br>
+    {% endfor %}
+    <hr>
+    {% set messages = get_flashed_messages() %}
+    {{ messages }}
+{% endblock %}
